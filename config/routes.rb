@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-    root 'posts#index'
+
+    root 'statics#home'
     resources :posts
 
 end

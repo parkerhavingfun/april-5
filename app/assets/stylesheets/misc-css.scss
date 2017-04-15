@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@media (min-width: 768px) {
+    .navbar-fixed-top, .aligned-center-navbar {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        text-align: center;
+    }
+    .navbar-middle {
+        text-align: center;
+    }
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
