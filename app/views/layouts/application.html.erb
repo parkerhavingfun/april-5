@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="full-height">
 <head>
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,6 +9,7 @@
 <body>
 
 <%= yield %>
+<%= link_to 'back to home', root_path %>
 
 </body>
 </html>

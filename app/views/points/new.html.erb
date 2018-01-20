@@ -1,0 +1,24 @@
+<h1>Create a new point</h1>
+
+<% unless @new_point.valid? %>
+    <% @new_point.errors.each do |error, message| %>
+        <p class="errormessage">Error with <%= error %>: <%= message %></p>
+    <% end %>
+<% end %>
+
+
+
+<%= form_for @new_point do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br><br>
+    <%= f.label :topic %>
+    <%= f.text_field :topic %>
+    <br><br>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+    <br><br>
+    <%= f.submit "Make your point", class: "point-button" %>
+
+<% end %>

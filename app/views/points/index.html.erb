@@ -1,0 +1,17 @@
+<h1>Points</h1>
+
+<%= link_to "Add a new point", new_point_path, class: "point-button" %>
+
+
+<h2>Recent points</h2>
+<% @points.each do |point| %>
+    <br><br><br>
+    <h3><%= link_to point.title, point %></h3>
+    <p><%= point.body %></p>
+    <p><i>Point made <%= time_ago_in_words point.created_at %> ago</i> | posted in <%= point.topic %></p>
+    <p>This point has been clapped for <u><%= point.claps.count %></u> times</p>
+    <h4><%= form_for point.claps.new, url: create_clap_point_url(id: point.id), remote: true do |f| %>
+            <%= f.submit "Clap for this point", class: "point-button" %>
+        <% end %>
+    <br><br>
+<% end %>
